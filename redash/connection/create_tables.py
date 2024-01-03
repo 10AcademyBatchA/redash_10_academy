@@ -1,4 +1,4 @@
-from sqlalchemy import ForeignKey, Column, String, Integer, CHAR, Float, Date
+from sqlalchemy import ForeignKey, Column, String, Integer, CHAR, Float, Date, text
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker
 from connect_to_postgres import ConnectToPostgres
@@ -13,7 +13,7 @@ class Cities_info(Base):
     geography = Column("geography", String)
     geography_with_capital = Column("geography_with_capital", String)
     watch_time = Column("watch_time_in_hours", Integer)
-    average_time_duration = Column("average_time_duration", Float)
+    average_time_duration = Column("average_time_duration", String)
 
     def __init__(self, cities, name, geography, geography_with_capital, watch_time, average_time_duration):
         self.cities = cities
@@ -43,7 +43,7 @@ class Content_type_info(Base):
     id = Column("id", Integer, primary_key=True)
     content_type = Column("content_type", String)
     watch_time = Column("watch_time_in_hours", Integer)
-    average_time_duration = Column("average_time_duration", Float)
+    average_time_duration = Column("average_time_duration", String)
 
     def __init__(self, id, content_type, watch_time, average_time_duration):
         id = self.id
@@ -71,7 +71,7 @@ class Device_type_info(Base):
     id = Column("id", Integer, primary_key=True)
     device_type = Column("device_type", String)
     watch_time = Column("watch_time_in_hours", Integer)
-    average_time_duration = Column("average_time_duration", Float)
+    average_time_duration = Column("average_time_duration", String)
 
     def __init__(self, id, content_type, watch_time, average_time_duration):
         id = self.id
