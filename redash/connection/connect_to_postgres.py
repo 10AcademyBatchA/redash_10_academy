@@ -3,6 +3,7 @@ import os
 from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
 
+#Todo: use context to connect to database 
 class ConnectToPostgres:
     load_dotenv()
     db_host = os.getenv("POSTGRES_HOST")
