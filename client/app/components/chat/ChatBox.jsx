@@ -2,6 +2,11 @@ import React,{ useState} from 'react'
 import redashpng from "@/assets/images/favicon-96x96.png";
 import './chatbox.less'
 import Chat from '@/services/chat';
+import { IoCopy } from "react-icons/io5";
+import { FaCheck } from "react-icons/fa6";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import copy from 'copy-to-clipboard';
 
 
 export default function ChatBox() {
@@ -36,7 +41,7 @@ export default function ChatBox() {
     };
      setChatHistory((history) => [...history, data]);
      setInput("");
-  }  
+  }
 
   const handleCopy = (content) => {
     copy(content);
@@ -99,8 +104,7 @@ export default function ChatBox() {
     return parts;
   };
 
- 
-
+  
   return (
     <>
       {open?
@@ -148,7 +152,6 @@ export default function ChatBox() {
                                         fontSize: '14px',
                                         lineHeight: '1.5',
                                         maxWidth: '100%',
-                                        width: '24.7rem',
                                         wordBreak: 'break-word',
                                         overflowWrap: 'break-word',
                                         whiteSpace: 'pre-wrap',
