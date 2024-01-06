@@ -108,7 +108,8 @@ class ApiExt(Api):
 
 api = ApiExt()
 
-api.add_org_resource(ChatResource, "/api/chat", endpoint="chat")
+api.add_org_resource(ChatResource, '/api/chat', endpoint='chat')
+
 
 @api.representation("application/json")
 def json_representation(data, code, headers=None):
