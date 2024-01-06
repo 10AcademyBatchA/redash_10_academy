@@ -1,5 +1,5 @@
 from sqlalchemy import ForeignKey, Column, String, Integer, CHAR, Float, Date, text
-from sqlalchemy.orm import declarative_base
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from connect_to_postgres import ConnectToPostgres
 
