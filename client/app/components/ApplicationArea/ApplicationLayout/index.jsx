@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import DynamicComponent from "@/components/DynamicComponent";
 import DesktopNavbar from "./DesktopNavbar";
 import MobileNavbar from "./MobileNavbar";
-import ChatBox from "@/components/chat/ChatBox";
 import "./index.less";
+import ChatBox from "@/components/chat/ChatBox";
 
 export default function ApplicationLayout({ children }) {
   const mobileNavbarContainerRef = useRef();
